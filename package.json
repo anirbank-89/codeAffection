@@ -19,6 +19,7 @@
     "express-handlebars": "^5.3.3",
     "mongodb": "^4.1.0",
     "mongoose": "^5.13.7",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "path": "^0.12.7"
   }
 }
