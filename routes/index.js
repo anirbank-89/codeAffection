@@ -18,5 +18,6 @@ ROUTER.post("/employee-insert", EMP_CONTROLLER.insert);
 ROUTER.get('/employee-list', EMP_CONTROLLER.display);
 ROUTER.get('/employee-details/:id', EMP_CONTROLLER.employeeExistingRecord);
 ROUTER.post('/employee-update', EMP_CONTROLLER.update);
+ROUTER.get('/employee-delete/:id', EMP_CONTROLLER.Delete);
 
 module.exports = ROUTER;

@@ -86,6 +86,16 @@ var update = async (req,res)=>{
         });
 }
 
+var Delete = async (req,res)=>{
+    EMPLOYEE_DETAILS.deleteOne({_id: {$in: [mongoose.Types.ObjectId(req.params.id)]}})
+      .then(data=>{
+          res.redirect('/employee-list')
+      })
+      .catch(err=>{
+          console.log("Couldn't delete data due to: "+err);
+      })
+}
+
 function handleValidationError(err, obj) {
     for(field in err.errors) {
         switch (err.errors[field].path) {
@@ -108,5 +118,6 @@ module.exports = {
     insert,
     display,
     employeeExistingRecord,
-    update
+    update,
+    Delete
 }
