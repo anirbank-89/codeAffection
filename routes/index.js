@@ -17,6 +17,6 @@ ROUTER.get('/', (req,res)=>{
 ROUTER.post("/employee-insert", EMP_CONTROLLER.insert);
 ROUTER.get('/employee-list', EMP_CONTROLLER.display);
 ROUTER.get('/employee-details/:id', EMP_CONTROLLER.employeeExistingRecord);
-ROUTER.put('/employee-update/:id', EMP_CONTROLLER.update);
+ROUTER.post('/employee-update', EMP_CONTROLLER.update);
 
 module.exports = ROUTER;

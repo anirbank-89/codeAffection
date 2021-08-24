@@ -64,12 +64,12 @@ var employeeExistingRecord = async (req,res)=>{
 
 var update = async (req,res)=>{
     EMPLOYEE_DETAILS.findOneAndUpdate(
-        {_id: {$in: [mongoose.Types.ObjectId(req.params._id)]}}, 
+        {_id: {$in: [mongoose.Types.ObjectId(req.body.id)]}}, 
         req.body, 
         { new: true}, 
         (err,docs)=>{
             if(!err) {
-                res.redirect('/employee-list')
+                res.redirect('/employee-list');
             }
             else {
                 if (err.name == 'ValidationError') {

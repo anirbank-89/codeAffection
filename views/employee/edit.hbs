@@ -1,7 +1,7 @@
 <h3>{{viewTitle}}</h3>
 
-<form autocomplete="off" action="/employee-update/{{employee._id}}" method="PUT">
-    {{!-- <input type="hidden" name="id" value="{{employee._id}}"> --}}
+<form autocomplete="off" action="/employee-update" method="POST">
+    <input type="hidden" name="id" value="{{employee._id}}">
     <div class="form-group">
         <label for="">Full name</label>
         <input type="text" class="form-control" name="fullName" placeholder="full name" value="{{employee.fullname}}">
