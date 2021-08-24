@@ -26,6 +26,12 @@ mongoose.connect('mongodb://127.0.0.1:27017/mydatabase',
 //     console.log('Connected successfully to database!');
 // });
 
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }))
+ 
+// parse application/json
+app.use(bodyParser.json())
+
 app.use('/', indexRoute);
 
 // MIDDLEWARE SETUP
